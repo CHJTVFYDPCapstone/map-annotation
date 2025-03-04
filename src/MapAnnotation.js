@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import logo from './assets/logo.png';
 
 const MapAnnotation = () => {
   const [image, setImage] = useState(null);
@@ -98,8 +99,8 @@ const MapAnnotation = () => {
 
   return (
     <div style={{ textAlign: "center", fontFamily: "Arial, sans-serif", padding: "20px" }}>
-      <img src="/logo.png" alt="Logo" style={{ width: "150px", marginBottom: "10px" }} />
-      <h1>Map Annotation Software</h1>
+      <img src={logo} alt="Logo" style={{ width: "150px", marginBottom: "10px" }} />
+      <h1>Enterprise Map Annotation Software</h1>
       <p>Upload an image, click on it to add labels, and download the image with labels or the label to position mapping.</p>
       <div style={{ margin: "20px 0" }}>
         <input type="file" accept="image/png, image/jpeg" onChange={handleUpload} ref={fileInputRef} 
